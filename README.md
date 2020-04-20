@@ -28,7 +28,7 @@ REST한 방식의 API란, 잘 설계된 API를 말한다.
 1. 복수명사를 사용한다(/movies)  
 2. 필요하면 URL에 하위 자원을 표현(/movies/23) => URI  
 3. 필터조건을 허용할 수 있다(/movies?state=active) => URI  
-### 예제  
+### 예제)  
 |URI|Methods|설명|
 |---|---|---|
 |/movies|GET|모든 영화리스트 가져오기|
