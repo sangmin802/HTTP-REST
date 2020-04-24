@@ -44,5 +44,5 @@ fetch등으로 request가 발생하면, 해당 Api를 제공하는 서버에서(
 ### 해결방법  
 1. 두개의 다른 도메인 혹은 포트의 서버를 자신이 관리하는 경우, 응답해줄 때 header의 Access-Control-Allow-Origin값을 * 또는 특정 도메인을 입력해주면 된다.(*는 모든 도메인으로부터의 요청을 허용이므로 비추천)  
 2. JSONP방식. jQuery랑 관련된 것 같아 안쓸생각  
-3. Proxy서버를 통한 거쳐오는 방식.(webpack의 devserver로 proxy설정을 통해 해줄 수 있다는데, node.js로 서버가 연동되어있는 상태에서도 가능한지는 모르겠음. 지금까지는 안되는것같음)  
+3. Proxy서버를 통한 거쳐오는 방식. react의 cra는 package.json에 proxy서버만 따로 입력해줘도 작동함. 기본적으로 webpack이 구성되어있기 때문.(webpack의 devserver로 proxy설정을 통해 해줄 수 있다는데, node.js로 서버가 연동되어있는 상태에서도 가능한지는 모르겠음. 지금까지는 안되는것같음)  
 4. open proxy서버 활용 깃허브에 open proxy서버가 있는데(CORS Anywhere) 해당 주소를 fetch url 앞에 함께 실행시키면 됨.(보안상 문제가 있다고 한다.)  
