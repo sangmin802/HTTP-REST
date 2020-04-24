@@ -36,4 +36,13 @@ REST한 방식의 API란, 잘 설계된 API를 말한다.
 |/movies/:title|GET|title 해당영화 가져오기|
 |/movies/:title|DELETE|title 해당 영화 삭제|
 |/movies/:title|PUT|title 해당영화 업데이트|
-|/movies?min=9|GET|평점이 최소 9 이상인 영화|
+|/movies?min=9|GET|평점이 최소 9 이상인 영화|  
+## HTTP 통신중 CORS ERROR  
+API를 활용해 AJAX를 통신하는 과정에서 서로다른 도메인 또는 포트끼리의 요청일 경우 동일출처정책에 의해 CORS ERROR가 발생하게 된다.  
+fetch등으로 request가 발생하면, 해당 Api를 제공하는 서버에서(입력한 url) response값을 반환하는데, 해당 서버에서 접속가능한 도메인을 *로 설정하지 않았다면, CORS ERROR가 발생함.  
+하지만, 외부 서버를 내가 조작하는것은 불가능하기때문에! 다른방법을 찾아야함  
+### 해결방법  
+1. 두개의 다른 도메인 혹은 포트의 서버를 자신이 관리하는 경우, 응답해줄 때 header의 Access-Control-Allow-Origin값을 * 또는 특정 도메인을 입력해주면 된다.(*는 모든 도메인으로부터의 요청을 허용이므로 비추천)  
+2. JSONP방식. jQuery랑 관련된 것 같아 안쓸생각  
+3. Proxy서버를 통한 거쳐오는 방식.(webpack의 devserver로 proxy설정을 통해 해줄 수 있다는데, node.js로 서버가 연동되어있는 상태에서도 가능한지는 모르겠음. 지금까지는 안되는것같음)  
+4. open proxy서버 활용 깃허브에 open proxy서버가 있는데(CORS Anywhere) 해당 주소를 fetch url 앞에 함께 실행시키면 됨.(보안상 문제가 있다고 한다.)  
