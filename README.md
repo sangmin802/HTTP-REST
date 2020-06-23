@@ -1,4 +1,4 @@
-# HTTP&REST
+# HTTP()&REST
 ## HTTP(Hypertext Transfer Protocol)  
 브라우저(클라이언트)와 서버간 데이터를 주고받기위한 방식(나는 이렇게 줄 테니, 넌 이렇게 받아) HTTP로 데이터를 주고받기 위해서는 Request, Response가 있어야한다.  
 ### URL을통해 데이터를 요청하는데, 요청하는 데이터에 특정 동작을 수행할 수 있다.  
