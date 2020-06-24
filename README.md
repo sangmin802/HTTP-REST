@@ -8,7 +8,15 @@
 4. DELETE : 존재하는 자원에 대한 삭제
 ### 기타 요청 method  
 1. HEAD : 서버 헤더 정보를 획득. GET과 비슷하나, Response Body를 반환하지 않는다.  
-2. OPTIONS : 서버 옵션들을 확인하기 위한 요청. CORS에서 사용    
+2. OPTIONS : 서버 옵션들을 확인하기 위한 요청. CORS에서 사용  
+## HTTPS(Hypertext Transfer Protocol Secure)  
+기본적으로 HTTP와 하는 기능은 동일하지만, 정보를 주고받을 때 암호화하여 민감한 정보를 도난당하는 것을 막아준다.  
+지난 2014년 Google에서는, 모든 http기반 웹사이트들을 https로 전환하도록 https기반 웹사이트들에게 검색순위에서 약간의 가산점을 주기시작했다.  
+### HTTPS 특징
+1. HTTPS와 HTTP의 가장 큰 차이점으로는 SSL인증서 사용 유무로, 클라이언트에서 서버에 제공하는 정보를 암호화해준다. 따라서, 중간에 도난당하더라도, 알수없는 문자열로 암호화되어있기때문에 해독할 수 없다.  
+2. TLS(전송 계층 보안)프로토콜을 통해서, 데이터 무결성을 제공하여 전송중에 수정되거나 손상되는것을 방지하고 클라이언트가 자신이 의도하는 서버와 통신하고있음을 입증하는 인증기능도 제공하고 있다.
+3. 보안상 가산점 및, 안전성 보장으로 SEO에 있어서도 큰 혜택을 본다.
+
 ## REST(REpresentational State Transfer)  
 웹을 구성하는 자원(resources)들을 고유한 이름으로 구분하여 해당 자원의 정보를 주고받는 것.  
 1. HTTP URL(어쩌면 URI가 맞을수도)을 통해 고유한 이름으로 자원을 명시하고,
@@ -17,7 +25,7 @@
 1. URL : 클라이언트가 서버에 요청한 파일!의 디렉토리(위치)  
 2. URI : 해당 자원의 고유 식별값  
 예시) http://clooo.loooooo.net/lectures.html(URL) vs http://clooo.loooooo.net/lectures/114(URI)
-#### URI는 URI을 포함하고있다.  
+#### URI는 URL을 포함하고있다.  
 ### RESTful API  
 REST한 방식의 API란, 잘 설계된 API를 말한다.  
 1. 웹을 근간으로 하는 HTTP 기반이다.  
